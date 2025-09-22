@@ -1,0 +1,394 @@
+nav {
+  z-index: 3;
+}
+.navbar .container .navbar-brand,
+.navbar .container .collapse ul li.nav-item a.nav-link:first-child {
+  color: #f6f6f6;
+  font-size: 1.2rem;
+}
+.navbar .container .collapse ul li.nav-item {
+  position: relative;
+  width: fit-content;
+}
+.navbar .container .collapse ul li.nav-item::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  display: block;
+  background-color: #e1e0e0;
+  transition: width 0.3s;
+  top: 100%;
+}
+.navbar .container .collapse ul li.nav-item:hover::before {
+  width: 100%;
+}
+.navbar .container .collapse ul li.nav-item a.nav-link:first-child:hover {
+  color: #e1e0e0;
+}
+.navbar .container .collapse ul li.custom-dropDown{
+  position: relative;
+  transition: 0.5s;
+  &:hover div.dropDown-menu{
+    display: flex;
+
+  }
+}
+.navbar .container .collapse ul li.custom-dropDown div.dropDown-menu{
+  background-color: #f6f6f6;
+  flex-direction: column;
+  padding: 10px;
+  position: absolute;
+  width: 210px;
+  display: none;
+}
+.navbar .container .collapse ul li.custom-dropDown div.dropDown-menu ul{
+  list-style: none;
+}
+.navbar .container .collapse ul li.custom-dropDown div.dropDown-menu ul li{
+  margin: 20px 0;
+  position: relative;
+}
+.navbar .container .collapse ul li.custom-dropDown div.dropDown-menu ul li::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  display: block;
+  background-color: #000;
+  transition: width 0.3s;
+  top: 100%;
+}
+.navbar .container .collapse ul li.custom-dropDown div.dropDown-menu ul li:hover::before {
+  width: 100%;
+}
+.navbar .container .collapse ul li.custom-dropDown div.dropDown-menu ul li a{
+  text-decoration: none;
+  color: unset;
+  
+}
+.navbar .container .collapse ul li.custom-dropDown div.dropDown-menu ul li.deepDropDown{
+  position: relative;
+  &:hover div{
+    display: unset;
+  }
+}
+.navbar .container .collapse ul li.custom-dropDown div.dropDown-menu ul li.deepDropDown div{
+  position: absolute;
+  background-color: #f6f6f6;
+  width: 210px;
+  left: 100%;
+  display: none;
+}
+@media (max-width: 991px) {
+  .navbar .container .collapse ul li.custom-dropDown div.dropDown-menu{
+    position: relative;
+  }
+}
+@media (max-width: 483px) {
+  .navbar .container .collapse ul li.custom-dropDown div.dropDown-menu ul li.deepDropDown div{
+    left: 0;
+    top: 30px;
+    z-index: 5;
+  }
+}
+.hero {
+  min-height: 100vh;
+  background-image: url("../img/DevFolio01.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #f6f6f6;
+  position: relative;
+  z-index: 0;
+  text-align: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 59%);
+  z-index: -1;
+}
+/* end hero section */
+#About .container {
+  box-shadow: 0px 0px 5px #b6b6b6;
+}
+#About .container .d-flex .aboutContent h2 {
+  margin-bottom: 75px;
+  width: fit-content;
+  position: relative;
+}
+#About .container .d-flex .aboutContent h2::before {
+  content: "";
+  width: 80%;
+  height: 3px;
+  display: inline-block;
+  position: absolute;
+  background-color: rgb(130, 130, 255);
+  top: 100%;
+}
+#About .container .d-flex .aboutContent p {
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+/* end about section */
+#Services .container .headOfServices {
+  position: relative;
+}
+#Services .container .headOfServices::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  display: inline-block;
+  background-color: rgb(130, 130, 255);
+  top: 100%;
+  transform: translateX(-50%);
+}
+#Services .container .headOfServices h2 {
+  font-weight: 900;
+  font-size: 3rem;
+}
+#Services .container div.row div.rounded-3 {
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover div.icons {
+    background-color: rgb(130, 130, 255);
+    border-color: rgb(255 255 255 / 36%);
+    outline: rgb(255 255 255 / 36%);
+    color: #f6f6f6;
+  }
+}
+#Services .container div.row div.rounded-3 div.icons {
+  width: 80px;
+  height: 80px;
+  border: solid;
+  padding: 20px;
+  border-width: 6px;
+  border-color: rgb(130, 130, 255);
+  border-radius: 50%;
+  transition: 0.5s;
+  color: unset;
+}
+#Services .container div.row div.rounded-3 div.icons i {
+  font-size: 30px;
+}
+/* end service section */
+.statistics .bgImg {
+  background-image: url("../img/DevFolio03.jpg");
+  background-attachment: fixed;
+  position: absolute;
+  width: 100%;
+}
+.statistics .content {
+  background-color: rgba(0, 119, 255, 0.459);
+  padding: 50px 0;
+  position: relative;
+  width: 100%;
+}
+.statistics .content .container .row .col-12 .colContent {
+  color: #f6f6f6;
+}
+.statistics .content .container .row .col-12 .colContent .iconCircle {
+  width: 80px;
+  height: 80px;
+  border: solid;
+  padding: 20px;
+  border-width: 6px;
+  border-color: rgb(245, 245, 255);
+  border-radius: 50%;
+}
+.statistics .content .container .row .col-12 .colContent .iconCircle i {
+  font-size: 25px;
+}
+/* end section statistics */
+#Work .container .headOfServices {
+  position: relative;
+}
+#Work .container .headOfServices::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  display: inline-block;
+  background-color: rgb(130, 130, 255);
+  top: 100%;
+  transform: translateX(-50%);
+}
+#Work .container .row .col-12 .card .img {
+  cursor: pointer;
+  overflow: hidden;
+}
+#Work .container .row .col-12 .card .img img {
+  transition: 0.8s;
+}
+#Work .container .row .col-12 .card:hover .img img {
+  transform: scale(1.3);
+}
+#Work .container .row .col-12 .card .card-body .plusIcon {
+  width: 50px;
+  height: 50px;
+  border: solid;
+  padding: 8px;
+  border-width: 5px;
+  border-color: rgb(130, 130, 255);
+  border-radius: 50%;
+  cursor: pointer;
+}
+#Work .container .row .col-12 .card .card-body .plusIcon i {
+  font-size: 25px;
+}
+#Work .container .row .col-12 .card .card-body .col-9 p span {
+  color: rgb(130, 130, 255);
+}
+#Work .container .headOfServices h2 {
+  font-weight: 900;
+  font-size: 3rem;
+}
+/* end section work */
+.Slider .bgImg {
+  background-image: url("../img/DevFolio10.jpg");
+  background-attachment: fixed;
+  position: absolute;
+  width: 100%;
+}
+.Slider .content {
+  background-color: rgba(0, 119, 255, 0.459);
+  position: relative;
+  width: 100%;
+}
+/* end section slider */
+#Blog .container .headOfServices h2 {
+  font-weight: 900;
+  font-size: 3rem;
+}
+#Blog .container .headOfServices {
+  position: relative;
+}
+#Blog .container .headOfServices::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  display: inline-block;
+  background-color: rgb(130, 130, 255);
+  top: 100%;
+  transform: translateX(-50%);
+}
+#Blog .container .row .card .cap {
+  background-color: rgba(0, 119, 255);
+  width: fit-content;
+  border-radius: 5px;
+  position: relative;
+  padding: 4px;
+  color: #f6f6f6;
+  transform: translateY(-50%);
+  margin: auto;
+}
+#Blog .container .row .card .img {
+  cursor: pointer;
+}
+#Blog .container .row .card .card-body .content-card-body h5 {
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    color: rgba(0, 119, 255);
+  }
+}
+/* end main section */
+#Contact .bgImg {
+  background-image: url("../img/DevFolio10.jpg");
+  background-attachment: fixed;
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+}
+#Contact .content {
+  background-color: rgba(0, 119, 255, 0.459);
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+#Contact .container {
+  box-shadow: 0px 0px 5px #b6b6b6;
+}
+#Contact .container .d-flex .aboutForm form input,
+#Contact .container .d-flex .aboutForm form button,
+#Contact .container .d-flex .aboutForm form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+#Contact .container .d-flex .aboutForm form input {
+  padding: 10px 5px;
+}
+#Contact .container .d-flex .aboutForm form button {
+  width: fit-content;
+  margin: auto;
+}
+#Contact .container .d-flex .aboutContent h2 {
+  margin-bottom: 75px;
+  width: fit-content;
+  position: relative;
+}
+#Contact .container .d-flex .aboutContent h2::before {
+  content: "";
+  width: 40%;
+  height: 3px;
+  display: inline-block;
+  position: absolute;
+  background-color: rgb(130, 130, 255);
+  top: 100%;
+}
+#Contact .container .d-flex .aboutContent p {
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+#Contact .container .d-flex .aboutContent .social div {
+  width: 50px;
+  height: 50px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50%;
+  border-color: rgba(0, 119, 255);
+  cursor: pointer;
+  color: unset;
+  padding: 10px;
+  transition: 0.8s;
+  &:hover {
+    background-color: rgba(0, 119, 255);
+    border-color: transparent;
+    color: #f6f6f6;
+  }
+}
+#Contact .container .d-flex .aboutContent .social div i {
+  font-size: 25px;
+}
+/* Arrow up */
+.arrowUp {
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  position: fixed;
+  display: none;
+  bottom: 10px;
+  right: 10px;
+  transition: 0.5s ease-in;
+  &:hover{
+    animation: upAnddown 0.5s ease-out infinite alternate;
+  }
+}
+@keyframes upAnddown {
+  to {
+    transform: translateY(-10px);
+  }
+}
